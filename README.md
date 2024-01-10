@@ -1,7 +1,13 @@
-<p align="center"><img src="https://i.imgur.com/3UKgyH7.png"></p>
 
-## Usage![Dashboard](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/3047d139-4b8e-495c-9f6d-53171cc03b97)
+## Snailly Desktop
+[Dashboard](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/3047d139-4b8e-495c-9f6d-53171cc03b97)
 
+### Deskripsi
+<p>Snailly adalah sebuah aplikasi untuk para orang tua mengontrol dan
+mengawasi aktivitas anak-anak mereka dalam menggunakan internet, di mana anak-anak dapat mengeksplorasi dunia internet dengan aman dan orang tua tidak akan
+ merasa khawatir tentang bahaya dari internet.</p>
+
+## Penggunaan
 
 ### Create an App
 
