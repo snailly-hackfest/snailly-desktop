@@ -7,6 +7,9 @@
 mengawasi aktivitas anak-anak mereka dalam menggunakan internet, di mana anak-anak dapat mengeksplorasi dunia internet dengan aman dan orang tua tidak akan
  merasa khawatir tentang bahaya dari internet.</p>
 
+## Instalasi
+<p>Unduh file exe melalui release github, link tertera di bagian release</p>
+
 ## Penggunaan
 
 ### Create an App
