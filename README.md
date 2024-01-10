@@ -9,6 +9,7 @@ mengawasi aktivitas anak-anak mereka dalam menggunakan internet, di mana anak-an
 
 ## Instalasi
 <p>Unduh file exe melalui release github, link tertera di bagian release</p>
+Link: https://github.com/snailly-hackfest/snailly-desktop/tags
 
 ## Penggunaan
 
