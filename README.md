@@ -1,6 +1,7 @@
 <p align="center"><img src="https://i.imgur.com/3UKgyH7.png"></p>
 
-## Usage
+## Usage![Dashboard](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/3047d139-4b8e-495c-9f6d-53171cc03b97)
+
 
 ### Create an App
 
