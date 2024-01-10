@@ -1,0 +1,21 @@
+appId: com.example.snailly
+productName: Snailly Desktop
+copyright: Copyright © 2022 UNIKOM CodeLabs
+directories:
+    output: dist
+    buildResources: resources
+win:
+  requestedExecutionLevel: requireAdministrator
+files:
+    - from: .
+      filter:
+          - package.json
+          - app
+          - resources
+extraFiles:
+    - from: .
+      filter:
+          - bin
+          - bat
+          - cert
+publish: null

@@ -1,0 +1,47 @@
+{
+    "private": true,
+    "name": "snailly-desktop",
+    "description": "Snailly Desktop is an application for parents to control and supervise their children's activities in using the internet, where children can explore the internet world safely and parents will not feel worried about the dangers of the internet.",
+    "version": "1.0.0",
+    "author": "Snailly",
+    "main": "app/background.js",
+    "scripts": {
+        "dev": "nextron",
+        "build": "nextron build",
+        "postinstall": "electron-builder install-app-deps"
+    },
+    "dependencies": {
+        "@mui/x-date-pickers": "^6.11.0",
+        "@types/react-icons": "^3.0.0",
+        "child_process": "^1.0.2",
+        "electron-push-receiver": "^2.1.3",
+        "electron-serve": "^1.1.0",
+        "electron-store": "^8.1.0",
+        "react-icons": "^4.10.1",
+        "recharts": "^2.7.2"
+    },
+    "devDependencies": {
+        "@emotion/babel-plugin": "^11.9.2",
+        "@emotion/css": "^11.9.0",
+        "@emotion/react": "^11.9.0",
+        "@emotion/styled": "^11.8.1",
+        "@fontsource/poppins": "^4.5.8",
+        "@mui/material": "^5.8.4",
+        "@types/node": "^16.11.7",
+        "@types/react": "^18.0.8",
+        "@types/recharts": "^1.8.24",
+        "axios": "^0.27.2",
+        "electron": "^18.2.0",
+        "electron-builder": "^23.0.3",
+        "framer-motion": "^6.3.11",
+        "moment": "^2.29.3",
+        "next": "^12.1.6",
+        "nextron": "^8.1.0",
+        "notistack": "^2.0.5",
+        "react": "^18.1.0",
+        "react-dom": "^18.1.0",
+        "typescript": "^4.6.4",
+        "typescript-transform-paths": "^3.3.1",
+        "zustand": "^4.0.0-rc.1"
+    }
+}

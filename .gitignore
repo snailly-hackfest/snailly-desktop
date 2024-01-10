@@ -1,0 +1,16 @@
+node_modules
+app
+dist
+build
+bin
+report
+
+*.log
+.next
+package-lock.json
+yarn.lock
+
+*.cer
+*.der
+*.p12
+*.pem
