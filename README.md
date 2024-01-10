@@ -1,6 +1,6 @@
 
 ## Snailly Desktop
-[Dashboard](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/3047d139-4b8e-495c-9f6d-53171cc03b97)
+![Dashboard](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/b019c0e6-1d7f-4421-9cfc-5db6144d6f76)
 
 ### Deskripsi
 <p>Snailly adalah sebuah aplikasi untuk para orang tua mengontrol dan
