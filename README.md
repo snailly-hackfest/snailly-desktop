@@ -5,7 +5,7 @@
 ### Deskripsi
 <p>Snailly adalah sebuah aplikasi untuk para orang tua mengontrol dan
 mengawasi aktivitas anak-anak mereka dalam menggunakan internet, di mana anak-anak dapat mengeksplorasi dunia internet dengan aman dan orang tua tidak akan
- merasa khawatir tentang bahaya dari internet.</p>
+ merasa khawatir tentang bahaya dari internet. Pada stage 2 ini kami membuat fitur surfior sesuai dengan sequence diagram yang telah kami ajukan.</p>
 
 ## Instalasi
 <p>Unduh file exe melalui release github, link tertera di bagian release</p>
