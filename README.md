@@ -12,20 +12,27 @@ mengawasi aktivitas anak-anak mereka dalam menggunakan internet, di mana anak-an
 Link: https://github.com/snailly-hackfest/snailly-desktop/tags
 
 ## Penggunaan
+### 1. Buka Aplikasi Snailly
+### 2. Pilih Menu Orang Tua
+![Screenshot (142)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/1742f2b8-bf40-4680-be57-7a1899ffcd90)
 
-### Create an App
+### 3. Login Akun (email:dev@gmail.com pass:password)
+![Screenshot (143)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/42381ff7-b3a3-4f38-b606-5f03c1f34547)
 
-```console
-# with npx
-$ npx create-nextron-app my-app --example with-typescript-emotion
+### 4. Pilih Menu Lock Agar Perangkat Anak Bisa Memblokir Website Negatif
+![Screenshot (144)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/a32f9dc3-99ae-444f-8a7e-d89d9b1bc2b2)
 
-# with yarn
-$ yarn create nextron-app my-app --example with-typescript-emotion
+### 5. Pilih Anak
+![Screenshot (146)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/3bf54188-0fbe-4667-9c1f-bf0a758ce12a)
 
-# with pnpx
-$ pnpx create-nextron-app my-app --example with-typescript-emotion
+### 6. Jika Anak Mengakses Website Negatif Maka Browser Akan Mengarahkan Pencarian Anak Ke Halaman Blokir
+![Screenshot (148)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/2c4f8427-3dfe-4139-8eb6-7fc2852d4598)
+
+### 7. Orang Tua Bisa Melihat Aktifitas Pencarian Anak
+![Screenshot (149)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/7cfaf611-7c57-4a96-a3fa-36b55ae5e07a)
+
 ```
-
+## Mode Development
 ### Install Dependencies
 
 ```console
@@ -38,7 +45,7 @@ $ yarn (or `npm install`)
 $ pnpm install --shamefully-hoist
 ```
 
-### Use it
+### Jalankan Mode Development
 
 ```console
 # development mode
@@ -48,7 +55,7 @@ $ yarn dev (or `npm run dev` or `pnpm run dev`)
 $ yarn build (or `npm run build` or `pnpm run build`)
 ```
 
-### Python Scripts
+### Instalasi Script Python
 
 ```console
 # install required libraries
