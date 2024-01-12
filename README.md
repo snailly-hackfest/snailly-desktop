@@ -12,7 +12,7 @@ supervise their children's activities on the internet, where children can explor
 <p>Download the exe file via github release, the link is listed in the release section</p>.
 Link: https://github.com/snailly-hackfest/snailly-desktop/tags
 
-## Penggunaan
+## Tutorial
 ### 1. Open Snailly App
 ### 2. Choose parent button
 ![Screenshot (142)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/1742f2b8-bf40-4680-be57-7a1899ffcd90)
