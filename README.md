@@ -46,7 +46,7 @@ $ yarn (or `npm install`)
 $ pnpm install --shamefully-hoist
 ```
 
-### Jalankan Mode Development
+### Run Development Mode
 
 ```console
 # development mode
@@ -56,7 +56,7 @@ $ yarn dev (or `npm run dev` or `pnpm run dev`)
 $ yarn build (or `npm run build` or `pnpm run build`)
 ```
 
-### Instalasi Script Python
+### Installation Script Python
 
 ```console
 # install required libraries
