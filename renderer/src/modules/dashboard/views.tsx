@@ -108,7 +108,7 @@ const DashboardViews = ({
     <>
       <Modal
         size="small"
-        title={grantAccess === false ? "Yakin untuk kunci akses website?" : "Yakin untuk buka akses website ini?"}
+        title={grantAccess === false ? "Are you sure to lock this website?" : "Are you sure to open this website?"}
         isOpen={isEditModalOpen}
         onClose={closeEditModalHandler}
         isGrantAccessType={true}
@@ -117,10 +117,10 @@ const DashboardViews = ({
         <form onSubmit={updateGrantAccess}>
           <div className={sLogModalButton}>
             <Button variant="tertiary" onClick={closeEditModalHandler} className={sLogDeleteButton}>
-              Batal
+              No
             </Button>
             <Button type="submit" className={sLogDeleteButton}>
-              Ya
+              Yes
             </Button>
           </div>
         </form>
@@ -132,13 +132,13 @@ const DashboardViews = ({
       ) : (
         <div className={sDashboardContent}>
           <section className={sDashboardCardSection}>
-            <Card title="Konten yang Diakses" icon={<Globe />}>
+            <Card title="Total Accessed Content" icon={<Globe />}>
               {listOfSummary["totalSafeWebsites"] + listOfSummary["totalDangerousWebsites"]}
             </Card>
-            <Card title="Total Konten Positif" icon={<SmileFace />} variant="positive">
+            <Card title="Total Positive Content" icon={<SmileFace />} variant="positive">
               {listOfSummary["totalSafeWebsites"]}
             </Card>
-            <Card title="Total Konten Negatif" icon={<BadFace />} variant="negative">
+            <Card title="Total Negative Content" icon={<BadFace />} variant="negative">
               {listOfSummary["totalDangerousWebsites"]}
             </Card>
           </section>
@@ -147,9 +147,9 @@ const DashboardViews = ({
             <div className={sDashboardChart}>
               <div className={sDashboardChartHeader}>
                 <Paragraph variant="l" weight="semibold">
-                  Statistik Akses Konten
+                  Statistics Accessed Content
                 </Paragraph>
-                <DatePicker views={["year"]} label="Pilih Tahun" onChange={yearChangeHandler} value={moment(year)} />
+                <DatePicker views={["year"]} label="Choose year" onChange={yearChangeHandler} value={moment(year)} />
               </div>
 
               <ResponsiveContainer width="99%" height={400}>
@@ -166,11 +166,11 @@ const DashboardViews = ({
             </div>
             <div className={sDashboardPie}>
               <Paragraph variant="l" weight="semibold" white>
-                Persentase Bulanan
+                Monthly Percentage
               </Paragraph>
               <DatePicker
                   views={["month", "year"]}
-                  label="Pilih Bulan"
+                  label="Choose month"
                   className={sDatePickerPieChart}
                   onChange={dateChangeHandler}
                   value={moment(date)}
@@ -194,24 +194,24 @@ const DashboardViews = ({
                   />
               </PieChart>
               <Paragraph variant="m" white>
-                Anak anda mengakses {calculateGoodPercentage(dataMonth)}% konten positif
+                Your child accessed {calculateGoodPercentage(dataMonth)}% positive content
               </Paragraph>
             </div>
           </div>
 
           <div className={sDashboardTable}>
             <Paragraph variant="l" weight="semibold">
-              Aktivitas Terbaru
+              New Activity
             </Paragraph>
             <Table>
               <thead>
                 <tr>
                   <th>No</th>
                   <th>URL</th>
-                  <th>Tanggal</th>
-                  <th>Nama Anak</th>
+                  <th>Date</th>
+                  <th>Children Name</th>
                   <th>Status</th>
-                  <th>Aksi</th>
+                  <th>Action</th>
                 </tr>
               </thead>
               <tbody>

@@ -31,7 +31,7 @@ const Modal = ({ size, title, isOpen, isDeleteType, isGrantAccessType, onClose, 
                                         {title}
                                     </Paragraph>
                                     <Paragraph variant='s'>
-                                        Data dengan nama <span className={sDeleteName}>{name}</span> akan dihapus secara permanen
+                                        Data with the name <span className={sDeleteName}>{name}</span> will be permantly deleted
                                     </Paragraph>        
                                 </div>        
                             </div>
@@ -57,9 +57,9 @@ const Modal = ({ size, title, isOpen, isDeleteType, isGrantAccessType, onClose, 
                                         {title}
                                     </Paragraph>
                                     <Paragraph variant='s'>
-                                        Data dengan url <span className={sDeleteName}>{name}</span>
+                                        Data with url <span className={sDeleteName}>{name}</span>
                                     </Paragraph>        
-                                    <Paragraph> akan diubah aksesnya </Paragraph>  
+                                    <Paragraph> will be changed </Paragraph>  
                                 </div>        
                             </div>
                             <div>{children}</div>

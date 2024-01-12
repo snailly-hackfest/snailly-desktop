@@ -7,8 +7,8 @@ const login = () => {
     return (
         <PageWrapper
             layoutType='auth'
-            title='Selamat Datang!'
-            caption='Mohon untuk mengisi email dan password anda untuk melanjutkan.'
+            title='Welcome!'
+            caption='Enter your email and password to login.'
         >
             <LoginModule />
         </PageWrapper>

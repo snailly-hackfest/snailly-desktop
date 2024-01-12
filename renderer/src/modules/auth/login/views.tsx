@@ -24,7 +24,7 @@ const LoginView = ({
                     label='Email'
                     value={data.email}
                     onChange={inputFormOnChange}
-                    placeholder='Tulis email di sini'
+                    placeholder='Type your email here'
                     disabled={isLoading}
                     isLabelWhite
                     required
@@ -35,7 +35,7 @@ const LoginView = ({
                     label='Password'
                     value={data.password}
                     onChange={inputFormOnChange}
-                    placeholder='Ketik password Anda di sini'
+                    placeholder='Type your password here'
                     disabled={isLoading}
                     isLabelWhite
                     required
@@ -43,11 +43,11 @@ const LoginView = ({
             </div>
             <div className={sLoginButton}>
                 <Button type='submit' disabled={isLoading}>
-                    Masuk
+                    Login
                 </Button>
                 <Paragraph variant='xs' white>
-                    Belum punya akun?{' '}
-                    <Link href='/auth/register'>Daftar</Link>
+                    Don't have account?{' '}
+                    <Link href='/auth/register'>Register</Link>
                 </Paragraph>
             </div>
         </form>

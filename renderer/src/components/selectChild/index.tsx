@@ -26,7 +26,7 @@ const SelectChild = () => {
   const DEFAULT_CHILDREN_LIST = [
     {
       id: '',
-      name: 'Semua',
+      name: 'All',
     },
   ];
 
@@ -67,10 +67,10 @@ const SelectChild = () => {
             <ChildFace />
           </span>
           <div className={sSelectChildPreview}>
-            <p className={sSelectChildPreviewLabel}>Nama anak ditinjau</p>
+            <p className={sSelectChildPreviewLabel}>Selected child name</p>
             <h2 className={sSelectChildPreviewChildName}>
               {childrenList.find((child) => child.id == selectedChildId)
-                ?.name || 'Semua'}
+                ?.name || 'All'}
             </h2>
           </div>
         </div>
@@ -87,7 +87,7 @@ const SelectChild = () => {
             <input
               value={searchChild}
               onChange={onSearchChild}
-              placeholder="Cari Berdasarkan Nama"
+              placeholder="Search by name"
               type={'text'}
             />
           </div>

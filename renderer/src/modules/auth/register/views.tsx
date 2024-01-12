@@ -15,16 +15,16 @@ const RegisterView = ({
     return (
         <form onSubmit={formOnSubmit} className={sRegister}>
             <Heading type='h5' variant='xs' white>
-                Registrasi Akun
+                Registration
             </Heading>
             <div className={sRegisterForm}>
                 <Input
                     type='text'
                     name='name'
-                    label='Nama'
+                    label='Name'
                     value={data.name}
                     onChange={inputFormOnChange}
-                    placeholder='Tulis nama Anda di sini'
+                    placeholder='Type your name here'
                     disabled={isLoading}
                     isLabelWhite
                     required
@@ -35,7 +35,7 @@ const RegisterView = ({
                     label='Email'
                     value={data.email}
                     onChange={inputFormOnChange}
-                    placeholder='Tulis email di sini'
+                    placeholder='Type your email here'
                     disabled={isLoading}
                     isLabelWhite
                     required
@@ -46,7 +46,7 @@ const RegisterView = ({
                     label='Password'
                     value={data.password}
                     onChange={inputFormOnChange}
-                    placeholder='Tulis password di sini'
+                    placeholder='Type your password here'
                     disabled={isLoading}
                     isLabelWhite
                     required
@@ -54,10 +54,10 @@ const RegisterView = ({
                 <Input
                     type='password'
                     name='confirmPassword'
-                    label='Konfirmasi Password'
+                    label='Confirm Password'
                     value={data.confirmPassword}
                     onChange={inputFormOnChange}
-                    placeholder='Tulis password di sini'
+                    placeholder='Type your confirm password here'
                     disabled={isLoading}
                     isLabelWhite
                     required
@@ -65,10 +65,10 @@ const RegisterView = ({
             </div>
             <div className={sRegisterButton}>
                 <Button type='submit' disabled={isLoading}>
-                    Daftar
+                    Register
                 </Button>
                 <Paragraph variant='xs' white>
-                    Sudah punya akun? <Link href='/auth/login'>Masuk</Link>
+                    Have already account? <Link href='/auth/login'>Login</Link>
                 </Paragraph>
             </div>
         </form>

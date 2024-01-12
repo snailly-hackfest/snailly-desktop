@@ -23,11 +23,11 @@ const HomeViews = () => {
           <LogoSnaily />
         </div>
         <div className={sHomeModuleHeading}>
-          <Paragraph variant="xl" weight="bold" white>
-            Siapakah Kamu?
+          <Paragraph variant="l" weight="bold" white>
+            Let me know who are you?
           </Paragraph>
           <Paragraph variant="s" white>
-            Pilih salah satu role di bawah ini untuk menuju fitur masing masing
+            Choose one of those role and click continue to access.
           </Paragraph>
         </div>
         <div className={sHomeModuleRoleWrapper}>
@@ -35,7 +35,7 @@ const HomeViews = () => {
             <button className={sHomeModuleRole}>
               <div className={sHomeModuleRoleItem}>
                 <ParentIcon />
-                <Paragraph white>Orang Tua</Paragraph>
+                <Paragraph white>Parent</Paragraph>
               </div>
             </button>
           </Link>
@@ -43,7 +43,7 @@ const HomeViews = () => {
             <button className={sHomeModuleRole}>
               <div className={sHomeModuleRoleItem}>
                 <KidsIcon />
-                <Paragraph white>Anak</Paragraph>
+                <Paragraph white>Kids</Paragraph>
               </div>
             </button>
           </Link>
