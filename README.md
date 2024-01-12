@@ -1,6 +1,7 @@
-
+![Screenshot (149)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/99622cea-e4ff-4fb6-9a46-837fb5193422)
 ## Snailly Desktop
-![Dashboard](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/b019c0e6-1d7f-4421-9cfc-5db6144d6f76)
+<img src="https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/c731e590-a07a-4adf-a477-cf49086e1096" />
+
 
 ### Description
 <p>Snailly is an application for parents to control and supervise their children's activities on the internet.
@@ -17,22 +18,23 @@ Link: https://github.com/snailly-hackfest/snailly-desktop/tags
 ![Screenshot (142)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/1742f2b8-bf40-4680-be57-7a1899ffcd90)
 
 ### 3. Login account (email:dev@gmail.com pass:password)
-![Screenshot (143)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/42381ff7-b3a3-4f38-b606-5f03c1f34547)
+![Screenshot (150)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/24ae9a24-d7bf-4732-9184-5fe5219efda3)
 
 ### 4. Choose lock menu to block negative websites on kids' devices
-![Screenshot (144)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/a32f9dc3-99ae-444f-8a7e-d89d9b1bc2b2)
+![Screenshot (151)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/bff69417-25f3-4b95-9c52-c9aff7737267)
 
 ### 5. select the desired child
-![Screenshot (146)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/3bf54188-0fbe-4667-9c1f-bf0a758ce12a)
+![Screenshot (146)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/f4b6a4d8-adc9-4caf-a4e9-cf540fcbfc75)
 
 ### 6. If a child accesses a negative website, the browser will redirect the child's search to the block page.r
-![Screenshot (148)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/2c4f8427-3dfe-4139-8eb6-7fc2852d4598)
+![Screenshot (148)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/11afd8de-b188-4d75-bba9-6dde826d9f94)
+
 
 ### 7. Parents can view their child's search activity
-![Screenshot (149)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/7cfaf611-7c57-4a96-a3fa-36b55ae5e07a)
+![Screenshot (149)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/e71ce0d6-a5c1-43e8-a3ec-a1d274482f51)
 
-```
 ## Mode Development
+```
 ### Install Dependencies
 
 ```console
