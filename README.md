@@ -1,4 +1,3 @@
-![Screenshot (149)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/99622cea-e4ff-4fb6-9a46-837fb5193422)
 ## Snailly Desktop
 <img src="https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/c731e590-a07a-4adf-a477-cf49086e1096" />
 
