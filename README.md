@@ -14,23 +14,24 @@ Link: https://github.com/snailly-hackfest/snailly-desktop/tags
 ## Tutorial
 ### 1. Open Snailly App
 ### 2. Choose parent button
-![Screenshot (142)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/1742f2b8-bf40-4680-be57-7a1899ffcd90)
+![Screenshot (157)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/a24d7f2b-e0b1-48ba-87cf-9f15e7313ee8)
 
 ### 3. Login account (email:devhackfest@gmail.com pass:password)
 ![Screenshot (150)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/24ae9a24-d7bf-4732-9184-5fe5219efda3)
 
 ### 4. Choose lock menu to block negative websites on kids' devices
-![Screenshot (151)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/bff69417-25f3-4b95-9c52-c9aff7737267)
+![Screenshot (159)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/09e1e290-e342-4d26-a2bc-4a4be9883fa3)
 
 ### 5. select the desired child
-![Screenshot (146)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/f4b6a4d8-adc9-4caf-a4e9-cf540fcbfc75)
+![Screenshot (160)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/18b9a926-1684-46b4-9006-e13511e27fd2)
+![Screenshot (161)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/f654f7d1-6e55-47b1-ac6c-d6695c0e3695)
 
 ### 6. If a child accesses a negative website, the browser will redirect the child's search to the block page.r
-![Screenshot (148)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/11afd8de-b188-4d75-bba9-6dde826d9f94)
+![Screenshot (160)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/d57d8e7d-3f48-4539-9f7d-47a414c52384)
 
 
 ### 7. Parents can view their child's search activity
-![Screenshot (149)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/e71ce0d6-a5c1-43e8-a3ec-a1d274482f51)
+![Screenshot (163)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/fadaa8f5-cdd3-4eb6-8458-f597b2f55e31)
 
 ## Mode Development
 ```
