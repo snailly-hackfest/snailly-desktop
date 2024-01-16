@@ -9,7 +9,7 @@ supervise their children's activities on the internet, where children can explor
 
 ## Installation
 <p>Download the exe file via github release, the link is listed in the release section</p>.
-Link: https://github.com/snailly-hackfest/snailly-desktop/tags
+Link: https://github.com/snailly-hackfest/snailly-desktop/releases/tag/1.0
 
 ## Tutorial
 ### 1. Open Snailly App
