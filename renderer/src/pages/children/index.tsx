@@ -5,7 +5,7 @@ import { ChildrenModule } from '@/modules'
 
 const children = () => {
     return (
-        <PageWrapper layoutType='base' title='Data Anak'>
+        <PageWrapper layoutType='base' title='Children Data'>
             <ChildrenModule />
         </PageWrapper>
     )

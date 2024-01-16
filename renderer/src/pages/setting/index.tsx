@@ -5,7 +5,7 @@ import { SettingModule } from "@/modules";
 
 const setting = () => {
   return (
-    <PageWrapper layoutType="base" title="Pengaturan">
+    <PageWrapper layoutType="base" title="Settings">
       <SettingModule />
     </PageWrapper>
   );

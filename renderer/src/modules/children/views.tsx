@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { LoadingIcon, PlusIcon } from '@/assets';
-import { getFormattedDate } from '@/utils';
 import { Modal, Input, Button, Table } from '@/components';
+import { useTablePaging } from '@/components/table/paging/hooks';
 
 import { ChildrenViewsProps } from './types';
 import {
@@ -18,10 +18,6 @@ import {
   sChildrenContent,
   sContentWrapper,
 } from './styles';
-import PageTitle from '@/components/pagetitle';
-import { useTablePaging } from '@/components/table/paging/hooks';
-import Paging from '@/components/table/paging';
-import { sPagingSection } from '../log-activity/styles';
 
 const ChildrenViews = ({
   formData,
@@ -53,7 +49,7 @@ const ChildrenViews = ({
     <>
       <Modal
         size="small"
-        title="Tambah Data Anak Baru"
+        title="Add New Child"
         isOpen={isAddModalOpen}
         onClose={closeAddModalHandler}
       >
@@ -68,17 +64,17 @@ const ChildrenViews = ({
           />
           <div className={sChildrenModalButton}>
             <Button variant="tertiary" onClick={closeAddModalHandler} fullWidth>
-              Batal
+              Cancel
             </Button>
             <Button type="submit" fullWidth>
-              Tambahkan
+              Add
             </Button>
           </div>
         </form>
       </Modal>
       <Modal
         size="small"
-        title="Edit Data Anak Baru"
+        title="Edit Child"
         isOpen={isEditModalOpen}
         onClose={closeEditModalHandler}
       >
@@ -97,7 +93,7 @@ const ChildrenViews = ({
               onClick={closeEditModalHandler}
               fullWidth
             >
-              Batal
+              Cancel
             </Button>
             <Button type="submit" fullWidth>
               Edit
@@ -107,7 +103,7 @@ const ChildrenViews = ({
       </Modal>
       <Modal
         size="small"
-        title="Yakin untuk menghapus?"
+        title="Are you sure want to delete this child"
         isOpen={isDeleteModalOpen}
         onClose={closeDeleteModalHandler}
         isDeleteType={true}
@@ -120,10 +116,10 @@ const ChildrenViews = ({
               onClick={closeDeleteModalHandler}
               className={sChildrenDeleteButton}
             >
-              Batal
+              Cancel
             </Button>
             <Button type="submit" className={sChildrenDeleteButton}>
-              Ya
+              Yes
             </Button>
           </div>
         </form>
@@ -135,7 +131,7 @@ const ChildrenViews = ({
               <span className={sChildrenAddIcon}>
                 <PlusIcon />
               </span>
-              Tambah Data Anak
+              Add New Child
             </Button>
           </div>
         </div>
@@ -151,8 +147,8 @@ const ChildrenViews = ({
                   <thead>
                     <tr>
                       <th>No</th>
-                      <th style={{width: '100%'}}>Nama Anak</th>
-                      <th>Aksi</th>
+                      <th style={{width: '100%'}}>Child Name</th>
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -179,7 +175,7 @@ const ChildrenViews = ({
                               }
                             >
                               {' '}
-                              Hapus{' '}
+                              Delete{' '}
                             </Button>
                           </td>
                         </tr>

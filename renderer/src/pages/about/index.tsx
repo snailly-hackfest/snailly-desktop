@@ -5,7 +5,7 @@ import { AboutModule } from "@/modules";
 
 const about = () => {
   return (
-    <PageWrapper layoutType="base" title="Tentang">
+    <PageWrapper layoutType="base" title="About">
       <AboutModule />
     </PageWrapper>
   );

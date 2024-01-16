@@ -3,7 +3,7 @@ import LogActivityModule from '@/modules/log-activity';
 
 const LogActivity = () => {
   return (
-    <PageWrapper layoutType='base' title='Log Aktivitas'>
+    <PageWrapper layoutType='base' title='Log Activity'>
       <LogActivityModule />
     </PageWrapper>
   );

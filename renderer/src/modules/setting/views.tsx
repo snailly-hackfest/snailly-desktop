@@ -18,9 +18,9 @@ const SettingView = ({
     return (
       <div>        
         <div className={sSettingHeading}>
-            <PageTitle title="Pengaturan" />
+            <PageTitle title="Setting" />
             <Paragraph variant="m" lightGreen>
-                Anda dapat mengubah password akun di sini
+                You can change your password here
             </Paragraph>
         </div>
         <form onSubmit={formOnSubmit} className={sSetting}>
@@ -28,36 +28,36 @@ const SettingView = ({
                     <Input
                         type="password"
                         name="oldPassword"
-                        label="Password Lama"
+                        label="Old Password"
                         value={data.oldPassword}
                         onChange={inputFormOnChange}
-                        placeholder="Ketik password lama di sini"
+                        placeholder="Type your old password here"
                         disabled={isLoading}
                         required
                         />
                     <Input
                         type="password"
                         name="newPassword"
-                        label="Password Baru"
+                        label="New Password"
                         value={data.newPassword}
                         onChange={inputFormOnChange}
-                        placeholder="Ketik password baru di sini"
+                        placeholder="Type your new password here"
                         disabled={isLoading}
                         required
                     />
                     <Input
                         type="password"
                         name="confirmPassword"
-                        label="Konfirmasi Password"
+                        label="Confirm Password"
                         value={data.confirmPassword}
                         onChange={inputFormOnChange}
-                        placeholder="Ketik password baru di sini"
+                        placeholder="Confirm your new password here"
                         disabled={isLoading}
                         required
                     />
                 <div className={sSettingButton}>
                     <Button type="submit" disabled={isLoading} fullWidth>
-                     Simpan
+                     Save
                     </Button>
                 </div>
             </div>

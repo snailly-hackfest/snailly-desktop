@@ -12,12 +12,12 @@ export const Routes: RouteProps[] = [
     {
         path: '/log-activity',
         icon: <LogsIcon />,
-        children: 'Log Aktivitas',
+        children: 'Log Activity',
     },
     {
         path: '/children',
         icon: <KidsIcon />,
-        children: 'Data Anak',
+        children: 'Children',
     },
     {
         path: '/home',
@@ -27,11 +27,11 @@ export const Routes: RouteProps[] = [
     {
         path: '/about',
         icon: <About />,
-        children: 'Tentang',
+        children: 'About',
     },
     {
         path: '/setting',
         icon: <Settings />,
-        children: 'Pengaturan',
+        children: 'Setting',
     }
 ]

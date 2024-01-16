@@ -229,8 +229,8 @@ const LogActivityModule = () => {
         size="small"
         title={
           grantAccess === false
-            ? 'Yakin untuk kunci akses website?'
-            : 'Yakin untuk buka akses website ini?'
+            ? 'Are you sure to lock this website?'
+            : 'Are you sure to unlock this website?'
         }
         isOpen={isEditModalOpen}
         onClose={closeEditModalHandler}
@@ -244,10 +244,10 @@ const LogActivityModule = () => {
               onClick={closeEditModalHandler}
               className={sLogDeleteButton}
             >
-              Batal
+              Cancel
             </Button>
             <Button type="submit" className={sLogDeleteButton}>
-              Ya
+              Yes
             </Button>
           </div>
         </form>
@@ -258,7 +258,7 @@ const LogActivityModule = () => {
             <DatePicker
               onChange={dateChangeHandler}
               views={['month', 'year']}
-              label="Pilih Bulan"
+              label="Choose Month"
               value={moment(valueMonth)}
             />
           )}
@@ -266,7 +266,7 @@ const LogActivityModule = () => {
             <DatePicker
               onChange={dateChangeHandlerDaily}
               views={['day', 'month', 'year']}
-              label="Pilih Tanggal"
+              label="Choose Date"
               value={moment(valueDay)}
             />
           )}
@@ -294,10 +294,10 @@ const LogActivityModule = () => {
                         <tr>
                           <th>No</th>
                           <th>URL</th>
-                          <th>Tanggal</th>
-                          <th>Nama Anak</th>
+                          <th>Date</th>
+                          <th>Child Name</th>
                           <th>Status</th>
-                          <th>Aksi</th>
+                          <th>Action</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -381,7 +381,7 @@ const LogActivityModule = () => {
               )}
               {logActivity?.items.length === 0 && (
                 <div className={sDashboardNoLogActivity}>
-                  <p>Belum ada log aktivitas</p>
+                  <p>There is no log activity</p>
                 </div>
               )}
             </>

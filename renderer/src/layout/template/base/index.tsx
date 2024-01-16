@@ -65,7 +65,7 @@ const Base = ({ title, children }: BaseProps) => {
         </div>
         <div className={sBaseNavigationFooter}>
           <Paragraph variant="xs" white>
-            Snailly Team &copy; 2023
+            Snailly Team &copy; 2024
           </Paragraph>
         </div>
       </div>

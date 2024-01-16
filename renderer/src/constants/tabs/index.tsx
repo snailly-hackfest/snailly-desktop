@@ -2,15 +2,15 @@ import { Tab } from "@/components/tabs/types";
 
 export const FILTER_PERIODE_TABS: Tab[] = [
   {
-    label: 'Semua',
+    label: 'All',
     value: '',
   },
   {
-    label: 'Harian',
+    label: 'Daily',
     value: 'daily',
   },
   {
-    label: 'Bulanan',
+    label: 'Monthly',
     value: 'monthly',
   },
 ];
