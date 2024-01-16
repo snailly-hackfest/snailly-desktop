@@ -50,5 +50,5 @@ ipcRenderer.on(NOTIFICATION_RECEIVED, (_, serverNotificationPayload) => {
 })
 
 // FCM sender ID from FCM console
-const senderId = ''
+const senderId = "729140941500";
 ipcRenderer.send(START_NOTIFICATION_SERVICE, senderId)
