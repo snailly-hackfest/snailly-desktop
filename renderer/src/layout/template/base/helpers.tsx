@@ -10,8 +10,28 @@ export const Routes: RouteProps[] = [
         children: 'Dashboard',
     },
     {
+        path: '/log-activity',
+        icon: <LogsIcon />,
+        children: 'Log Aktivitas',
+    },
+    {
+        path: '/children',
+        icon: <KidsIcon />,
+        children: 'Data Anak',
+    },
+    {
         path: '/home',
         icon: <LockIcon />,
         children: 'Lock',
     },
+    {
+        path: '/about',
+        icon: <About />,
+        children: 'Tentang',
+    },
+    {
+        path: '/setting',
+        icon: <Settings />,
+        children: 'Pengaturan',
+    }
 ]
