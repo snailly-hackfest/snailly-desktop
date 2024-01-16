@@ -16,7 +16,7 @@ Link: https://github.com/snailly-hackfest/snailly-desktop/tags
 ### 2. Choose parent button
 ![Screenshot (142)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/1742f2b8-bf40-4680-be57-7a1899ffcd90)
 
-### 3. Login account (email:dev@gmail.com pass:password)
+### 3. Login account (email:devhackfest@gmail.com pass:password)
 ![Screenshot (150)](https://github.com/snailly-hackfest/snailly-desktop/assets/66149479/24ae9a24-d7bf-4732-9184-5fe5219efda3)
 
 ### 4. Choose lock menu to block negative websites on kids' devices
