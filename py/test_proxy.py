@@ -40,13 +40,13 @@ def request(flow: http.HTTPFlow):
                     flow.response = http.Response.make(
                             302,
                             b'',
-                            {"Location": "https://white-pebble-088ad5110.2.azurestaticapps.net"},
+                            {"Location": "https://snailly-block.netlify.app"},
                         )
                 elif(currentRequest in combined_list_websites):
                     flow.response = http.Response.make(
                             302,
                             b'',
-                            {"Location": "https://white-pebble-088ad5110.2.azurestaticapps.net"},
+                            {"Location": "https://snailly-block.netlify.app"},
                         )
                 else:
                     print("Tidak Berbahaya: URL", currentRequest)

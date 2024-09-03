@@ -15,7 +15,6 @@ import {
 } from "./styles";
 
 const HomeViews = () => {
-  
   return (
     <div className={sHomeModule}>
       <div className={sHomeModuleContent}>
@@ -24,10 +23,10 @@ const HomeViews = () => {
         </div>
         <div className={sHomeModuleHeading}>
           <Paragraph variant="l" weight="bold" white>
-            Let me know who are you?
+            Siapakah Kamu?
           </Paragraph>
           <Paragraph variant="s" white>
-            Choose one of those role and click continue to access.
+            Pilih salah satu role di bawah ini untuk menuju fitur masing-masing
           </Paragraph>
         </div>
         <div className={sHomeModuleRoleWrapper}>
@@ -35,7 +34,7 @@ const HomeViews = () => {
             <button className={sHomeModuleRole}>
               <div className={sHomeModuleRoleItem}>
                 <ParentIcon />
-                <Paragraph white>Parent</Paragraph>
+                <Paragraph white>Orang Tua</Paragraph>
               </div>
             </button>
           </Link>
@@ -43,7 +42,7 @@ const HomeViews = () => {
             <button className={sHomeModuleRole}>
               <div className={sHomeModuleRoleItem}>
                 <KidsIcon />
-                <Paragraph white>Kids</Paragraph>
+                <Paragraph white>Anak</Paragraph>
               </div>
             </button>
           </Link>

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { Paragraph } from '@/typography';
-import { Link, Button } from '@/components';
-import { KidsIcon, DodoTextLogo, LoadingIcon } from '@/assets';
+import { Paragraph } from "@/typography";
+import { Link, Button } from "@/components";
+import { KidsIcon, DodoTextLogo, LoadingIcon } from "@/assets";
 
-import { ChildrenViewsProps } from './types';
+import { ChildrenViewsProps } from "./types";
 import {
   sLoginChild,
   sLoginAsParent,
@@ -14,8 +14,8 @@ import {
   sLoginChildAccount,
   sLoginChildAccountWrapper,
   sLoadingContainer,
-} from './styles';
-import { zustand } from '@/services';
+} from "./styles";
+import { zustand } from "@/services";
 
 const LoginChildViews = ({
   childrenList,
@@ -38,10 +38,10 @@ const LoginChildViews = ({
           <>
             <div className={sLoginChildHeader}>
               <Paragraph variant="l" weight="bold" white>
-                Let me know who are you?
+                Siapakah Kamu?
               </Paragraph>
               <Paragraph variant="xs" white>
-                Choose one of those children account and click it to continue.
+                Pilih salah satu akun anak dan klik untuk melanjutkan.
               </Paragraph>
             </div>
             <div className={sLoginChildAccountWrapper}>
@@ -68,10 +68,10 @@ const LoginChildViews = ({
         {!isLoading && childrenList.length === 0 && (
           <div className={sLoginAsParent}>
             <Paragraph variant="l" weight="bold" white>
-              Please do login as parent first.
+              Silakan login sebagai orang tua terlebih dahulu.
             </Paragraph>
             <Link href="/auth/login">
-              <Button>Login as Parent</Button>
+              <Button>Masuk sebagai Orang Tua</Button>
             </Link>
           </div>
         )}

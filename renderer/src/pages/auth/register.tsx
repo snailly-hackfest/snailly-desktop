@@ -1,18 +1,18 @@
-import React from 'react'
+import React from "react";
 
-import { PageWrapper } from '@/layout'
-import { RegisterModule } from '@/modules'
+import { PageWrapper } from "@/layout";
+import { RegisterModule } from "@/modules";
 
 const register = () => {
-    return (
-        <PageWrapper
-            layoutType='auth'
-            title='Welcome!'
-            caption='Enter your email and password to register.'
-        >
-            <RegisterModule />
-        </PageWrapper>
-    )
-}
+  return (
+    <PageWrapper
+      layoutType="auth"
+      title="Selamat Datang!"
+      caption="Daftar di sini untuk memantau anak-anak."
+    >
+      <RegisterModule />
+    </PageWrapper>
+  );
+};
 
-export default register
+export default register;

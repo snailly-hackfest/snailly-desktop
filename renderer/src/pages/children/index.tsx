@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import { PageWrapper } from '@/layout'
-import { ChildrenModule } from '@/modules'
+import { PageWrapper } from "@/layout";
+import { ChildrenModule } from "@/modules";
 
 const children = () => {
-    return (
-        <PageWrapper layoutType='base' title='Children Data'>
-            <ChildrenModule />
-        </PageWrapper>
-    )
-}
+  return (
+    <PageWrapper layoutType="base" title="Data Anak">
+      <ChildrenModule />
+    </PageWrapper>
+  );
+};
 
-export default children
+export default children;

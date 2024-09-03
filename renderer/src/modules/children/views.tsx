@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { LoadingIcon, PlusIcon } from '@/assets';
-import { Modal, Input, Button, Table } from '@/components';
-import { useTablePaging } from '@/components/table/paging/hooks';
+import { LoadingIcon, PlusIcon } from "@/assets";
+import { Modal, Input, Button, Table } from "@/components";
+import { useTablePaging } from "@/components/table/paging/hooks";
 
-import { ChildrenViewsProps } from './types';
+import { ChildrenViewsProps } from "./types";
 import {
   sChildren,
   sChildrenHeading,
@@ -17,7 +17,7 @@ import {
   sChildrenAddIcon,
   sChildrenContent,
   sContentWrapper,
-} from './styles';
+} from "./styles";
 
 const ChildrenViews = ({
   formData,
@@ -49,7 +49,7 @@ const ChildrenViews = ({
     <>
       <Modal
         size="small"
-        title="Add New Child"
+        title="Tambah Data Anak Baru"
         isOpen={isAddModalOpen}
         onClose={closeAddModalHandler}
       >
@@ -57,24 +57,24 @@ const ChildrenViews = ({
           <Input
             name="name"
             type="text"
-            label="Name"
+            label="Nama Anak"
             value={formData.name}
             disabled={isFormLoading}
             onChange={inputAddOnChangeHandler}
           />
           <div className={sChildrenModalButton}>
             <Button variant="tertiary" onClick={closeAddModalHandler} fullWidth>
-              Cancel
+              Batal
             </Button>
             <Button type="submit" fullWidth>
-              Add
+              Tambahkan
             </Button>
           </div>
         </form>
       </Modal>
       <Modal
         size="small"
-        title="Edit Child"
+        title="Edit Data Anak Baru"
         isOpen={isEditModalOpen}
         onClose={closeEditModalHandler}
       >
@@ -82,7 +82,7 @@ const ChildrenViews = ({
           <Input
             name="name"
             type="text"
-            label="Name"
+            label="Nama Anak"
             value={formData.name}
             disabled={isFormLoading}
             onChange={inputEditOnChangeHandler}
@@ -93,21 +93,21 @@ const ChildrenViews = ({
               onClick={closeEditModalHandler}
               fullWidth
             >
-              Cancel
+              Batal
             </Button>
             <Button type="submit" fullWidth>
-              Edit
+              Simpan
             </Button>
           </div>
         </form>
       </Modal>
       <Modal
         size="small"
-        title="Are you sure want to delete this child"
+        title="Yakin untuk menghapus?"
         isOpen={isDeleteModalOpen}
         onClose={closeDeleteModalHandler}
         isDeleteType={true}
-        name={formData.name ? formData.name : ''}
+        name={formData.name ? formData.name : ""}
       >
         <form onSubmit={formDeleteOnSubmitHandler}>
           <div className={sChildrenModalButton}>
@@ -116,10 +116,10 @@ const ChildrenViews = ({
               onClick={closeDeleteModalHandler}
               className={sChildrenDeleteButton}
             >
-              Cancel
+              Batal
             </Button>
             <Button type="submit" className={sChildrenDeleteButton}>
-              Yes
+              Ya
             </Button>
           </div>
         </form>
@@ -131,7 +131,7 @@ const ChildrenViews = ({
               <span className={sChildrenAddIcon}>
                 <PlusIcon />
               </span>
-              Add New Child
+              Tambah Data Anak
             </Button>
           </div>
         </div>
@@ -147,8 +147,8 @@ const ChildrenViews = ({
                   <thead>
                     <tr>
                       <th>No</th>
-                      <th style={{width: '100%'}}>Child Name</th>
-                      <th>Action</th>
+                      <th style={{ width: "100%" }}>Nama Anak</th>
+                      <th>Aksi</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -164,8 +164,8 @@ const ChildrenViews = ({
                                 openEditModalHandler(item.id, item.name)
                               }
                             >
-                              {' '}
-                              Edit{' '}
+                              {" "}
+                              Ubah{" "}
                             </Button>
                             <Button
                               type="submit"
@@ -174,8 +174,8 @@ const ChildrenViews = ({
                                 openDeleteModalHandler(item.id, item.name)
                               }
                             >
-                              {' '}
-                              Delete{' '}
+                              {" "}
+                              Hapus{" "}
                             </Button>
                           </td>
                         </tr>

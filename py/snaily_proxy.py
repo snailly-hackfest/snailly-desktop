@@ -59,7 +59,7 @@ class Addon:
                         flow.response = http.Response.make(
                             302,
                             b'',
-                            {"Location": "https://white-pebble-088ad5110.2.azurestaticapps.net?f=" + notif_token},
+                            {"Location": "https://snailly-block.netlify.app?f=" + notif_token},
                         )
                     elif currentRequest in combined_list_websites:
                         parent = jwt.decode(token, options={"verify_signature": False})
@@ -73,7 +73,7 @@ class Addon:
                         flow.response = http.Response.make(
                             302,
                             b'',
-                            {"Location": "https://white-pebble-088ad5110.2.azurestaticapps.net?f=" + notif_token},
+                            {"Location": "https://snailly-block.netlify.app?f=" + notif_token},
                         )
                     else:
                         self.queue.put_nowait(request_url)

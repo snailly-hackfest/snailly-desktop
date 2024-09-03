@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   BarChart,
   CartesianGrid,
@@ -11,16 +11,16 @@ import {
   Pie,
   ResponsiveContainer,
   Sector,
-} from 'recharts';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import moment from 'moment';
+} from "recharts";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import moment from "moment";
 
-import { LoadingIcon, Globe, BadFace, SmileFace } from '@/assets';
-import { Table, Card, Button, Modal } from '@/components';
-import { Paragraph } from '@/typography';
-import { getFormattedDateIndonesia } from '@/utils/formateDate';
+import { LoadingIcon, Globe, BadFace, SmileFace } from "@/assets";
+import { Table, Card, Button, Modal } from "@/components";
+import { Paragraph } from "@/typography";
+import { getFormattedDateIndonesia } from "@/utils/formateDate";
 
-import { DashboardViewsProps } from './types';
+import { DashboardViewsProps } from "./types";
 import {
   sTableLeft,
   sTableLink,
@@ -40,8 +40,8 @@ import {
   sLogDeleteButton,
   sLogModalButton,
 } from "./styles";
-import { calculateGoodPercentage, getStatusComponent } from './helpers';
-import { LockClosed, LockOpen } from '@/assets/lockaccess';
+import { calculateGoodPercentage, getStatusComponent } from "./helpers";
+import { LockClosed, LockOpen } from "@/assets/lockaccess";
 
 const DashboardViews = ({
   isLoading,
@@ -62,24 +62,24 @@ const DashboardViews = ({
   updateGrantAccess,
   openEditModalHandler,
   closeEditModalHandler,
-  isEditModalOpen
+  isEditModalOpen,
 }: DashboardViewsProps) => {
-  console.log(logId)
+  console.log(logId);
   const dataYear = listStatisticYear.map((item) => {
     return {
       month: item.month,
       Good: item.Good,
       Bad: item.Bad,
     };
-  })
+  });
 
-  const dataMonth = listStatisticMonth.map((item) => {    
+  const dataMonth = listStatisticMonth.map((item) => {
     return {
       name: item.name,
       value: item.name === "Good" && item.value === 0 ? 1 : item.value,
       fill: item.name === "Good" ? "#FFBC57" : "#FF5757",
     };
-  })
+  });
 
   const renderPieChartLabel = (props) => {
     const { cx, cy } = props;
@@ -93,7 +93,7 @@ const DashboardViews = ({
         fontSize={32}
         fontWeight={700}
       >
-        {props.name === 'Good' ? `${calculateGoodPercentage(dataMonth)}%` : ''}
+        {props.name === "Good" ? `${calculateGoodPercentage(dataMonth)}%` : ""}
       </text>
     );
   };
@@ -101,14 +101,18 @@ const DashboardViews = ({
   const handleToggleLogId = (logId: string) => {
     setLogId(logId);
     // setGrantAccess(!grantAccess);
-    console.log(grantAccess)
+    console.log(grantAccess);
   };
 
   return (
     <>
       <Modal
         size="small"
-        title={grantAccess === false ? "Are you sure to lock this website?" : "Are you sure to open this website?"}
+        title={
+          grantAccess === false
+            ? "Apakah Anda yakin untuk mengunci situs web ini?"
+            : "Apakah Anda yakin untuk membuka situs web ini?"
+        }
         isOpen={isEditModalOpen}
         onClose={closeEditModalHandler}
         isGrantAccessType={true}
@@ -116,11 +120,15 @@ const DashboardViews = ({
       >
         <form onSubmit={updateGrantAccess}>
           <div className={sLogModalButton}>
-            <Button variant="tertiary" onClick={closeEditModalHandler} className={sLogDeleteButton}>
-              No
+            <Button
+              variant="tertiary"
+              onClick={closeEditModalHandler}
+              className={sLogDeleteButton}
+            >
+              Batal
             </Button>
             <Button type="submit" className={sLogDeleteButton}>
-              Yes
+              Ya
             </Button>
           </div>
         </form>
@@ -132,13 +140,22 @@ const DashboardViews = ({
       ) : (
         <div className={sDashboardContent}>
           <section className={sDashboardCardSection}>
-            <Card title="Total Accessed Content" icon={<Globe />}>
-              {listOfSummary["totalSafeWebsites"] + listOfSummary["totalDangerousWebsites"]}
+            <Card title="Total Konten yang Diakses" icon={<Globe />}>
+              {listOfSummary["totalSafeWebsites"] +
+                listOfSummary["totalDangerousWebsites"]}
             </Card>
-            <Card title="Total Positive Content" icon={<SmileFace />} variant="positive">
+            <Card
+              title="Total Konten Positif"
+              icon={<SmileFace />}
+              variant="positive"
+            >
               {listOfSummary["totalSafeWebsites"]}
             </Card>
-            <Card title="Total Negative Content" icon={<BadFace />} variant="negative">
+            <Card
+              title="Total Konten Negatif"
+              icon={<BadFace />}
+              variant="negative"
+            >
               {listOfSummary["totalDangerousWebsites"]}
             </Card>
           </section>
@@ -147,71 +164,87 @@ const DashboardViews = ({
             <div className={sDashboardChart}>
               <div className={sDashboardChartHeader}>
                 <Paragraph variant="l" weight="semibold">
-                  Statistics Accessed Content
+                  Statistik Akses Konten
                 </Paragraph>
-                <DatePicker views={["year"]} label="Choose year" onChange={yearChangeHandler} value={moment(year)} />
+                <DatePicker
+                  views={["year"]}
+                  label="Pilih Tahun"
+                  onChange={yearChangeHandler}
+                  value={moment(year)}
+                />
               </div>
 
               <ResponsiveContainer width="99%" height={400}>
                 <BarChart data={dataYear}>
                   <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="month" dy={30} height={70} tickFormatter={(tick) => tick.substring(0, 3)} />
+                  <XAxis
+                    dataKey="month"
+                    dy={30}
+                    height={70}
+                    tickFormatter={(tick) => tick.substring(0, 3)}
+                  />
                   <YAxis />
                   <Tooltip />
-                  <Legend verticalAlign="top" wrapperStyle={{ lineHeight: "40px" }} />
-                  <Bar dataKey="Good" fill="#4E773F" />
-                  <Bar dataKey="Bad" fill="#FF5757" />
+                  <Legend
+                    verticalAlign="top"
+                    wrapperStyle={{ lineHeight: "40px" }}
+                  />
+                  <Bar dataKey="Baik" fill="#4E773F" />
+                  <Bar dataKey="Buruk" fill="#FF5757" />
                 </BarChart>
               </ResponsiveContainer>
             </div>
             <div className={sDashboardPie}>
               <Paragraph variant="l" weight="semibold" white>
-                Monthly Percentage
+                Persentase Bulanan
               </Paragraph>
               <DatePicker
-                  views={["month", "year"]}
-                  label="Choose month"
-                  className={sDatePickerPieChart}
-                  onChange={dateChangeHandler}
-                  value={moment(date)}
+                views={["month", "year"]}
+                label="Pilih Bulan"
+                className={sDatePickerPieChart}
+                onChange={dateChangeHandler}
+                value={moment(date)}
               />
               <PieChart width={170} height={250}>
-                  <Legend
-                    verticalAlign="top"
-                    formatter={(value, _entry, _payload) => <span style={{ color: "#fff" }}>{value}</span>}
-                  />
-                   <Pie
-                    data={dataMonth}
-                    dataKey="value"
-                    nameKey="name"
-                    cx="50%"
-                    cy="50%"
-                    innerRadius={55}
-                    outerRadius={80}
-                    labelLine={false}
-                    label={renderPieChartLabel}
-                    style={{ outline: "none" }}
-                  />
+                <Legend
+                  verticalAlign="top"
+                  formatter={(value, _entry, _payload) => (
+                    <span style={{ color: "#fff" }}>{value}</span>
+                  )}
+                />
+                <Pie
+                  data={dataMonth}
+                  dataKey="value"
+                  nameKey="name"
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={55}
+                  outerRadius={80}
+                  labelLine={false}
+                  label={renderPieChartLabel}
+                  style={{ outline: "none" }}
+                />
               </PieChart>
               <Paragraph variant="m" white>
-                Your child accessed {calculateGoodPercentage(dataMonth)}% positive content
+                Anak anda mengakses {calculateGoodPercentage(dataMonth)}% konten
+                positif
               </Paragraph>
             </div>
           </div>
 
           <div className={sDashboardTable}>
             <Paragraph variant="l" weight="semibold">
-              New Activity
+              Aktifitas Terbaru
             </Paragraph>
             <Table>
               <thead>
                 <tr>
                   <th>No</th>
                   <th>URL</th>
-                  <th>Date</th>
-                  <th>Children Name</th>
+                  <th>Tanggal</th>
+                  <th>Nama Anak</th>
                   <th>Status</th>
-                  <th>Action</th>
+                  <th>Aksi</th>
                 </tr>
               </thead>
               <tbody>
@@ -221,8 +254,13 @@ const DashboardViews = ({
                   return (
                     <tr key={index}>
                       <td>{index + 1}</td>
-                      <td onClick={() => linkOpenHandler(item.url)} className={sTableLeft}>
-                        <p className={sTableLink}>{item.url ? item.url : "unknown"}</p>
+                      <td
+                        onClick={() => linkOpenHandler(item.url)}
+                        className={sTableLeft}
+                      >
+                        <p className={sTableLink}>
+                          {item.url ? item.url : "unknown"}
+                        </p>
                       </td>
                       <td>{getFormattedDateIndonesia(item.createdAt)}</td>
                       <td>{item.child.name}</td>
@@ -233,7 +271,13 @@ const DashboardViews = ({
                             type="submit"
                             className={sDashboardButtonLock}
                             onClick={() => {
-                              (item.grant_access !== null || item.classified_url["FINAL_label"] !== null) && openEditModalHandler(item.log_id, item.grant_access, item.url);
+                              (item.grant_access !== null ||
+                                item.classified_url["FINAL_label"] !== null) &&
+                                openEditModalHandler(
+                                  item.log_id,
+                                  item.grant_access,
+                                  item.url
+                                );
                             }}
                           >
                             {item.grant_access !== null ? (
@@ -255,7 +299,7 @@ const DashboardViews = ({
             </Table>
             {logActivity?.items.length === 0 && (
               <div className={sDashboardNoLogActivity}>
-                <p>No Log Activity Available</p>
+                <p>Tidak Ada Aktivitas Log yang Tersedia</p>
               </div>
             )}
           </div>

@@ -1,90 +1,90 @@
-import { useRouter } from 'next/router'
-import { useSnackbar } from 'notistack'
-import React, { ChangeEvent, useState } from 'react'
+import { useRouter } from "next/router";
+import { useSnackbar } from "notistack";
+import React, { ChangeEvent, useState } from "react";
 
-import { axiosPost, displayErrorMessage } from '@/utils'
-import { Heading, Paragraph } from '@/typography'
-import { Link, Input, Button } from '@/components'
+import { axiosPost, displayErrorMessage } from "@/utils";
+import { Heading, Paragraph } from "@/typography";
+import { Link, Input, Button } from "@/components";
 
-import RegisterView from './views'
-import { RegisterForm } from './types'
-import { sRegister, sRegisterForm, sRegisterButton } from './styles'
+import RegisterView from "./views";
+import { RegisterForm } from "./types";
+import { sRegister, sRegisterForm, sRegisterButton } from "./styles";
 
 const RegisterModule = () => {
-    const router = useRouter()
+  const router = useRouter();
 
-    const { enqueueSnackbar } = useSnackbar()
+  const { enqueueSnackbar } = useSnackbar();
 
-    const defaultRegisterForm: RegisterForm = {
-        name: '',
-        email: '',
-        password: '',
-        confirmPassword: '',
+  const defaultRegisterForm: RegisterForm = {
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+  };
+
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [data, setData] = useState<RegisterForm>({
+    ...defaultRegisterForm,
+  });
+
+  const inputFormOnChange = (element: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = element.target;
+
+    setData({
+      ...data,
+      [name]: value,
+    });
+  };
+
+  const formOnSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    setIsLoading(true);
+    const { password, confirmPassword } = data;
+
+    if (password !== confirmPassword) {
+      enqueueSnackbar("Password tidak cocok", { variant: "error" });
+
+      setIsLoading(false);
+
+      return;
     }
 
-    const [isLoading, setIsLoading] = useState<boolean>(false)
-    const [data, setData] = useState<RegisterForm>({
-        ...defaultRegisterForm,
-    })
+    enqueueSnackbar("Mendaftarkan akun Anda", { variant: "info" });
 
-    const inputFormOnChange = (element: ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = element.target
+    try {
+      const response = await axiosPost(
+        "/auth/register",
+        {
+          ...data,
+        },
+        {}
+      );
 
-        setData({
-            ...data,
-            [name]: value,
-        })
+      const responseData = response.data;
+
+      setData({ ...data, ...defaultRegisterForm });
+
+      enqueueSnackbar(responseData.message, {
+        variant: "success",
+      });
+
+      router.push("/auth/login");
+    } catch (error) {
+      displayErrorMessage(error, enqueueSnackbar);
+    } finally {
+      setIsLoading(false);
     }
+  };
 
-    const formOnSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
-        event.preventDefault()
+  return (
+    <RegisterView
+      data={data}
+      isLoading={isLoading}
+      formOnSubmit={formOnSubmit}
+      inputFormOnChange={inputFormOnChange}
+    />
+  );
+};
 
-        setIsLoading(true)
-        const { password, confirmPassword } = data
-
-        if (password !== confirmPassword) {
-            enqueueSnackbar('Passwords do not match', { variant: 'error' })
-
-            setIsLoading(false)
-
-            return
-        }
-
-        enqueueSnackbar('Registering your account', { variant: 'info' })
-
-        try {
-            const response = await axiosPost(
-                '/auth/register',
-                {
-                    ...data,
-                },
-                {}
-            )
-
-            const responseData = response.data
-
-            setData({ ...data, ...defaultRegisterForm })
-
-            enqueueSnackbar(responseData.message, {
-                variant: 'success',
-            })
-
-            router.push('/auth/login')
-        } catch (error) {
-           displayErrorMessage(error, enqueueSnackbar);
-        } finally {
-            setIsLoading(false)
-        }
-    }
-
-    return (
-        <RegisterView
-            data={data}
-            isLoading={isLoading}
-            formOnSubmit={formOnSubmit}
-            inputFormOnChange={inputFormOnChange}
-        />
-    )
-}
-
-export default RegisterModule
+export default RegisterModule;

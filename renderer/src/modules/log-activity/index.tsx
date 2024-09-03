@@ -1,27 +1,27 @@
-import { LoadingIcon } from '@/assets';
-import { LockClosed, LockOpen } from '@/assets/lockaccess';
-import { Status, Table, Button, Modal } from '@/components';
-import Paging from '@/components/table/paging';
+import { LoadingIcon } from "@/assets";
+import { LockClosed, LockOpen } from "@/assets/lockaccess";
+import { Status, Table, Button, Modal } from "@/components";
+import Paging from "@/components/table/paging";
 import {
   sTableDateColumn,
   sTableOverflowHidden,
-} from '@/components/table/styles';
-import { Tabs } from '@/components/tabs';
-import { FILTER_PERIODE_TABS } from '@/constants/tabs';
-import { LogActivity } from '@/models';
-import { zustand } from '@/services';
-import { axiosGet, axiosPut, displayErrorMessage } from '@/utils';
-import { getFormattedDateIndonesia } from '@/utils/formateDate';
-import { DatePicker } from '@mui/x-date-pickers';
-import { useSnackbar } from 'notistack';
-import moment, { Moment, MomentInput } from 'moment';
-import { FormEvent, useEffect, useState } from 'react';
-import { sChildrenLoading } from '../children/styles';
+} from "@/components/table/styles";
+import { Tabs } from "@/components/tabs";
+import { FILTER_PERIODE_TABS } from "@/constants/tabs";
+import { LogActivity } from "@/models";
+import { zustand } from "@/services";
+import { axiosGet, axiosPut, displayErrorMessage } from "@/utils";
+import { getFormattedDateIndonesia } from "@/utils/formateDate";
+import { DatePicker } from "@mui/x-date-pickers";
+import { useSnackbar } from "notistack";
+import moment, { Moment, MomentInput } from "moment";
+import { FormEvent, useEffect, useState } from "react";
+import { sChildrenLoading } from "../children/styles";
 import {
   sDashboardButtonLock,
   sDashboardNoLogActivity,
   sTableLink,
-} from '../dashboard/styles';
+} from "../dashboard/styles";
 
 import {
   sLogActivityContainer,
@@ -33,8 +33,8 @@ import {
   sContentBase,
   sLogModalButton,
   sLogDeleteButton,
-} from './styles';
-import { getStatusComponent } from '../dashboard/helpers';
+} from "./styles";
+import { getStatusComponent } from "../dashboard/helpers";
 import { shell } from "electron";
 
 const LogActivityModule = () => {
@@ -45,13 +45,13 @@ const LogActivityModule = () => {
   const [logActivity, setLogActivity] = useState<LogActivity | null>(null);
   const [grantAccess, setGrantAccess] = useState<boolean>(false);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
-  const [logId, setLogId] = useState<string>('');
-  const [url, setUrl] = useState<string>('');
+  const [logId, setLogId] = useState<string>("");
+  const [url, setUrl] = useState<string>("");
   const [valueMonth, setValueMonth] = useState<MomentInput>(
-    moment().format('YYYY-MM')
+    moment().format("YYYY-MM")
   );
   const [valueDay, setValueDay] = useState<MomentInput>(
-    moment().format('YYYY-MM-DD')
+    moment().format("YYYY-MM-DD")
   );
 
   const state = {
@@ -64,7 +64,7 @@ const LogActivityModule = () => {
     setIsLoading(true);
     try {
       const response = await axiosGet(
-        `/log/${state.selectedChildId || 'ALL'}?period=${activeTab}`,
+        `/log/${state.selectedChildId || "ALL"}?period=${activeTab}`,
         {
           headers: {
             Authorization: `Bearer ${state.user.accessToken}`,
@@ -93,7 +93,7 @@ const LogActivityModule = () => {
 
     try {
       const response = await axiosGet(
-        `/log/${state.selectedChildId || 'ALL'}?period=${activeTab}`,
+        `/log/${state.selectedChildId || "ALL"}?period=${activeTab}`,
         {
           headers: {
             Authorization: `Bearer ${state.user.accessToken}`,
@@ -128,7 +128,7 @@ const LogActivityModule = () => {
     const yearValue = moment(momentValue).year();
     try {
       const response = await axiosGet(
-        `/log/${state.selectedChildId || 'ALL'}?period=${activeTab}`,
+        `/log/${state.selectedChildId || "ALL"}?period=${activeTab}`,
         {
           headers: {
             Authorization: `Bearer ${state.user.accessToken}`,
@@ -152,12 +152,12 @@ const LogActivityModule = () => {
 
   const getDatePickerViews = () => {
     switch (activeTab) {
-      case 'daily':
-        return ['day'];
-      case 'monthly':
-        return ['day', 'month'];
+      case "daily":
+        return ["day"];
+      case "monthly":
+        return ["day", "month"];
       default:
-        return ['day', 'month', 'year'];
+        return ["day", "month", "year"];
     }
   };
 
@@ -174,7 +174,7 @@ const LogActivityModule = () => {
         }
       );
       const updatedGrantAccess = dataGrantAccess.data.data.grantAccess;
-      enqueueSnackbar(dataGrantAccess.data.message, { variant: 'success' });
+      enqueueSnackbar(dataGrantAccess.data.message, { variant: "success" });
       getLogDataByDaily();
       setIsEditModalOpen(false);
     } catch (error) {
@@ -200,12 +200,12 @@ const LogActivityModule = () => {
   };
 
   const dateChangeHandler = (date: Moment) => {
-    const formatedDate = date.format('YYYY-MM');
+    const formatedDate = date.format("YYYY-MM");
     setValueMonth(formatedDate);
   };
 
   const dateChangeHandlerDaily = (date: Moment) => {
-    const formatedDate = date.format('YYYY-MM-DD');
+    const formatedDate = date.format("YYYY-MM-DD");
     setValueDay(formatedDate);
   };
 
@@ -214,9 +214,9 @@ const LogActivityModule = () => {
   };
 
   useEffect(() => {
-    if (activeTab === 'monthly') {
+    if (activeTab === "monthly") {
       getLogDataByMonth();
-    } else if (activeTab === 'daily') {
+    } else if (activeTab === "daily") {
       getLogDataByDaily();
     } else {
       getLogData();
@@ -229,8 +229,8 @@ const LogActivityModule = () => {
         size="small"
         title={
           grantAccess === false
-            ? 'Are you sure to lock this website?'
-            : 'Are you sure to unlock this website?'
+            ? "Apakah Anda yakin untuk mengunci situs web ini?"
+            : "Apakah Anda yakin untuk membuka kunci situs web ini?"
         }
         isOpen={isEditModalOpen}
         onClose={closeEditModalHandler}
@@ -244,33 +244,33 @@ const LogActivityModule = () => {
               onClick={closeEditModalHandler}
               className={sLogDeleteButton}
             >
-              Cancel
+              Batal
             </Button>
             <Button type="submit" className={sLogDeleteButton}>
-              Yes
+              Ya
             </Button>
           </div>
         </form>
       </Modal>
       <div className={sLogActivityContainer}>
         <div className={sTitleSection}>
-          {activeTab === 'monthly' && (
+          {activeTab === "monthly" && (
             <DatePicker
               onChange={dateChangeHandler}
-              views={['month', 'year']}
-              label="Choose Month"
+              views={["month", "year"]}
+              label="Pilih Bulan"
               value={moment(valueMonth)}
             />
           )}
-          {activeTab === 'daily' && (
+          {activeTab === "daily" && (
             <DatePicker
               onChange={dateChangeHandlerDaily}
-              views={['day', 'month', 'year']}
-              label="Choose Date"
+              views={["day", "month", "year"]}
+              label="Pilih Tanggal"
               value={moment(valueDay)}
             />
           )}
-          <div style={{marginLeft: 'auto'}}>
+          <div style={{ marginLeft: "auto" }}>
             <Tabs
               tabs={FILTER_PERIODE_TABS}
               activeTab={activeTab}
@@ -294,10 +294,10 @@ const LogActivityModule = () => {
                         <tr>
                           <th>No</th>
                           <th>URL</th>
-                          <th>Date</th>
-                          <th>Child Name</th>
+                          <th>Tanggal</th>
+                          <th>Nama Anak</th>
                           <th>Status</th>
-                          <th>Action</th>
+                          <th>Aksi</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -308,8 +308,13 @@ const LogActivityModule = () => {
                                 index +
                                 1}
                             </td>
-                            <td className={sTableOverflowHidden} onClick={() => linkOpenHandler(log.url)}>
-                              <p className={sTableLink}>{ log.url ? log.url : "unknown url" }</p>
+                            <td
+                              className={sTableOverflowHidden}
+                              onClick={() => linkOpenHandler(log.url)}
+                            >
+                              <p className={sTableLink}>
+                                {log.url ? log.url : "unknown url"}
+                              </p>
                             </td>
                             <td className={sTableDateColumn}>
                               {getFormattedDateIndonesia(log.createdAt)}
@@ -322,7 +327,7 @@ const LogActivityModule = () => {
                                 className={sDashboardButtonLock}
                                 onClick={() => {
                                   (log.grant_access !== null ||
-                                    log.classified_url['FINAL_label'] !==
+                                    log.classified_url["FINAL_label"] !==
                                       null) &&
                                     openEditModalHandler(
                                       log.log_id,
@@ -339,7 +344,7 @@ const LogActivityModule = () => {
                                   )
                                 ) : (
                                   <LockClosed />
-                                )}{' '}
+                                )}{" "}
                               </Button>
                             </td>
                           </tr>
@@ -354,23 +359,23 @@ const LogActivityModule = () => {
                       limit={logActivity.limit}
                       totalPage={logActivity.totalPage}
                       handlePreviousPage={() => {
-                        activeTab === 'daily'
+                        activeTab === "daily"
                           ? getLogDataByDaily(logActivity.page - 1)
-                          : activeTab === 'monthly'
+                          : activeTab === "monthly"
                           ? getLogDataByMonth(logActivity.page - 1)
                           : getLogData(logActivity.page - 1); // Replace with your default case
                       }}
                       handleNextPage={() => {
-                        activeTab === 'daily'
+                        activeTab === "daily"
                           ? getLogDataByDaily(logActivity.page + 1)
-                          : activeTab === 'monthly'
+                          : activeTab === "monthly"
                           ? getLogDataByMonth(logActivity.page + 1)
                           : getLogData(logActivity.page + 1); // Replace with your default case
                       }}
                       handleJumpToPage={(pageNumber) => {
-                        activeTab === 'daily'
+                        activeTab === "daily"
                           ? getLogDataByDaily(pageNumber)
-                          : activeTab === 'monthly'
+                          : activeTab === "monthly"
                           ? getLogDataByMonth(pageNumber)
                           : getLogData(pageNumber); // Replace with your default case
                       }}
@@ -381,7 +386,7 @@ const LogActivityModule = () => {
               )}
               {logActivity?.items.length === 0 && (
                 <div className={sDashboardNoLogActivity}>
-                  <p>There is no log activity</p>
+                  <p>Tidak ada aktivitas log</p>
                 </div>
               )}
             </>
